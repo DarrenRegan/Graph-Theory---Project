@@ -9,5 +9,5 @@ G00326934 - Graph Theory Project - build a non-deterministic finite automaton (N
 
 ** References **
 
-http://www.oxfordmathcenter.com/drupal7/node/628
+http://www.oxfordmathcenter.com/drupal7/node/628     
 https://swtch.com/~rsc/regexp/regexp1.html
