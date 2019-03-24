@@ -30,6 +30,8 @@ Thompson's Construction
 
 
 ** References **
+Shunting Yard Algorithm by Hand
+https://web.microsoftstream.com/video/a29536d4-e975-4172-a470-40b4fe28866e
 
 http://www.oxfordmathcenter.com/drupal7/node/628     
 https://swtch.com/~rsc/regexp/regexp1.html    
