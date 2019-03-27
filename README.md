@@ -29,9 +29,9 @@ G00326934 - Graph Theory Project - build a non-deterministic finite automaton (N
 4. Take these smaller NFA's, stack up like lego blocks to build a bigger NFA
 
 ## Shunting Yard Algorithm
-1. 
-2. 
-3. 
+1. Converts an infix expression into a postfix expression
+2. It uses a stack
+3. The purpose of the stack is to reverse the order of the operators in the expression
 4. 
 
 
@@ -43,5 +43,6 @@ https://web.microsoftstream.com/video/a29536d4-e975-4172-a470-40b4fe28866e
 http://www.oxfordmathcenter.com/drupal7/node/628     
 https://swtch.com/~rsc/regexp/regexp1.html    
 https://www.oreilly.com/programming/free/files/a-whirlwind-tour-of-python.pdf
+
 https://www.geeksforgeeks.org/stack-set-2-infix-to-postfix/
 http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html
