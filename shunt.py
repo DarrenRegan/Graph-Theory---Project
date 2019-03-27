@@ -21,7 +21,7 @@ def sYard(infix):
         stack = stack[:-1] #Deleting things from top of stack, Up to but not including last bracket
       stack = stack[:-1] #Removes open bracket
     elif c in specials: #Is c in special Dictionary
-      while stack and specials.get(c, 0) <= specials.get(stack[-1], 0): 
+      while stack and specials.get(c, 0) <= specials.get(stack[-1], 0): #If not there give 0
         #While c Precedence is less then or equal to the Precedence of the last operator on the stack
         postfix = postfix + stack[-1]
         stack = stack[:-1]
@@ -35,3 +35,5 @@ def sYard(infix):
     stack = stack[:-1]
 
   return postfix
+
+print(sYard("(a.b)|(c*.d)"))
