@@ -1,7 +1,11 @@
 # Graph-Theory---Project
 G00326934 - Graph Theory Project - build a non-deterministic finite automaton (NFA) from a regular expression, and can use the NFA to check if the regular expression matches any given string of text.
 
+<<<<<<< HEAD
 # Quick Notes
+=======
+# Notes
+>>>>>>> 01160648a9446e3d0f0671e71f86f958defd9de5
 ## Examples of Regular Expressions
 1. a.b.c   - a single (a) followed by a single (b) followed by a single (c)
 2. a.b.c*  - an (a) followed by a (b) followed by zero or more (c's)
@@ -41,5 +45,9 @@ https://web.microsoftstream.com/video/a29536d4-e975-4172-a470-40b4fe28866e
 http://www.oxfordmathcenter.com/drupal7/node/628     
 https://swtch.com/~rsc/regexp/regexp1.html    
 https://www.oreilly.com/programming/free/files/a-whirlwind-tour-of-python.pdf
+<<<<<<< HEAD
 
+=======
+https://www.geeksforgeeks.org/stack-set-2-infix-to-postfix/
+>>>>>>> 01160648a9446e3d0f0671e71f86f958defd9de5
 http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html
