@@ -1,6 +1,5 @@
-# Graph-Theory---Project
-G00326934 - Graph Theory Project - build a non-deterministic finite automaton (NFA) from a regular expression, and can use the NFA to check if the regular expression matches any given string of text.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # Quick Notes
 =======
@@ -51,3 +50,5 @@ https://www.oreilly.com/programming/free/files/a-whirlwind-tour-of-python.pdf
 https://www.geeksforgeeks.org/stack-set-2-infix-to-postfix/
 >>>>>>> 01160648a9446e3d0f0671e71f86f958defd9de5
 http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html
+=======
+>>>>>>> 8becf371a17e8527c4a8039c60aa2456a048b2ee
