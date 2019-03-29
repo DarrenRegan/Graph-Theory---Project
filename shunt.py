@@ -37,4 +37,5 @@ def sYard(infix):
   return postfix
 
 print(sYard("(a.b)|(c*.d)"))
+print(sYard("(a.b)|(c*.d?d)"))
 #Prints out ab.c*d.|
