@@ -4,9 +4,10 @@
 # Shunting Yard Algorithm
 # Takes single argument which is a infix regular expression
 def sYard(infix):
+  """The Shunting Yard Algorithm for converting infix regular expressions to postfix."""
 
   # Order of Precedence: * First > Apply . after * but before | > Apply | last > Treat bracketed groups as individual characters
-  specials = {'*': 5, '.': 4, '+': 3, '?': 2, '|': 1} #Dictionary
+  specials = {'*': 50, '+': 50, '?': 50, '.': 40, '|': 30} # Dictionary
 
   postfix = ""
   stack = ""
@@ -36,6 +37,6 @@ def sYard(infix):
 
   return postfix
 
-print(sYard("(a.b)|(c*.d)"))
-print(sYard("(a.b)|(c*.d?d)"))
+#print(sYard("(a.b)|(c*.d)"))
+#print(sYard("(a.b)|(c*.d?d)"))
 # Prints out ab.c*d.|
