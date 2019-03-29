@@ -1,7 +1,26 @@
 # Darren Regan - G00326934 - Software Development Group C
 # Graph Theory Project
 
+# Match Reg Expressions
 # Combine Shunt.py and Thompsons.py to create an NFA from a regular expression
+
+def followEs(state):
+  """Return the set of states that can be reached from state follwoing e arrows"""
+  # Create a new set, with state as its only member
+  states = set()
+  states.add(state)
+  
+  # Check if state has arrows labelled e from it
+  if state.label is None:
+    # Check if edge1 is a state
+    if state.edge1 is not None:
+      states |= followEs(state.edge1) # If edge1 exists follow it
+    # Check if edge2 is a state
+    if state.edge2 is not None:
+      states |= followEs(state.edge2) # If edge2 exists follow it
+
+  # Return set of states
+  return states
 
 def match(infix, string):
   """Matches string to infix regular expression"""
@@ -10,8 +29,30 @@ def match(infix, string):
   nfa = compile(postfix)
 
   # The Current set of states and the next set of states
-  current = set()
-  nexts = set()
+  current = set() # First empty set
+  next = set()
+
+  # Add the initial state to current set
+  current |= followEs(nfa.initial)
 
   # Loop through each char in string
   for s in string:
+    # Loop through the current set of states
+    for c in current:
+      # Check if state is labelled s
+      if c.label == s:
+        next |= followEs(c.edge1) # Add edge1 state to next set
+    # Set current to next, and clear out next
+    current = next
+    next = set()
+
+  # Check if the accept state is in the set of current states
+  return (nfa.accept in current)
+
+# Tests
+infixes = ["a.b?","a.b.c?", "a.(b|d).c+", "(a.(b|d))*", "a.(b.b)*.c"]
+strings = ["ab", "abc", "abbc", "abcc", "abad", "abbbc"]
+
+for i in infixes:
+  for s in strings:
+    print(match(i, s), i, s)
