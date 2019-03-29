@@ -75,6 +75,14 @@ def compile(postfix):
       nfa1 = nfaStack.pop()
       # Create new initial and accept states
       initial = state()
+      accept = state()
+      # Joining States
+      initial.edge1 = nfa1.initial
+      initial.edge2 = accept
+      # Join the old accept state to the new accept state and nfa1's initial state
+      nfa1.accept.edge1 = accept
+      # Push new NFA to the stack
+      nfaStack.append(nfa(initial, accept))
     else:
       accept = state() # Create instance of state
       initial = state()
@@ -88,3 +96,4 @@ def compile(postfix):
 print(compile("ab.cd.|"))
 print(compile("aa.*"))
 print(compile("aa.+"))
+print(compile("aa.?"))
