@@ -84,3 +84,8 @@ def compile(profix):
 
   # nfaStack should only have a single nfa on it at this point
   return nfaStack.pop()
+  
+#print(compile("ab.cd.|"))
+#print(compile("aa.*"))
+#print(compile("aa.+"))
+#print(compile("aa.?"))

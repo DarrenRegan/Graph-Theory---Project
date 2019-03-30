@@ -53,8 +53,8 @@ def match(infix, string):
   return (nfa.accept in current)
 
 # Tests
-infixes = ["a.b?","a.b.c?", "a.(b|d).c+", "(a.(b|d))*", "a.(b.b)*.c"]
-strings = ["ab", "abc", "abbc", "abcc", "abad", "abbbc"]
+infixes = ["a.b+.c?","a?.b.c", "a.(b|d).c+", "(a.(b|d))*", "a.(b.b)*.c"]
+strings = ["","ab", "abc", "abbc", "abcc", "abad", "abbbc"]
 
 for i in infixes: 
   for s in strings:
