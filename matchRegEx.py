@@ -4,7 +4,11 @@
 # Match Reg Expressions
 # Combine Shunt.py and Thompsons.py to create an NFA from a regular expression
 
-def followEs(state):
+# Imports
+from shunt import shunt
+from thompsons import compile
+
+def followes(state):
   """Return the set of states that can be reached from state follwoing e arrows"""
   # Create a new set, with state as its only member
   states = set()
@@ -14,10 +18,10 @@ def followEs(state):
   if state.label is None:
     # Check if edge1 is a state
     if state.edge1 is not None:
-      states |= followEs(state.edge1) # If edge1 exists follow it
+      states |= followes(state.edge1) # If edge1 exists follow it
     # Check if edge2 is a state
     if state.edge2 is not None:
-      states |= followEs(state.edge2) # If edge2 exists follow it
+      states |= followes(state.edge2) # If edge2 exists follow it
 
   # Return set of states
   return states
@@ -30,10 +34,10 @@ def match(infix, string):
 
   # The Current set of states and the next set of states
   current = set() # First empty set
-  next = set()
+  nextState = set()
 
   # Add the initial state to current set
-  current |= followEs(nfa.initial)
+  current |= followes(nfa.initial)
 
   # Loop through each char in string
   for s in string:
@@ -41,10 +45,10 @@ def match(infix, string):
     for c in current:
       # Check if state is labelled s
       if c.label == s:
-        next |= followEs(c.edge1) # Add edge1 state to next set
+        nextState |= followes(c.edge1) # Add edge1 state to next set
     # Set current to next, and clear out next
-    current = next
-    next = set()
+    current = nextState
+    nextState = set()
 
   # Check if the accept state is in the set of current states
   return (nfa.accept in current)

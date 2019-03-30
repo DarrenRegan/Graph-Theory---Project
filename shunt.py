@@ -3,7 +3,7 @@
 
 # Shunting Yard Algorithm
 # Takes single argument which is a infix regular expression
-def sYard(infix):
+def shunt(infix):
   """The Shunting Yard Algorithm for converting infix regular expressions to postfix."""
 
   # Order of Precedence: * First > Apply . after * but before | > Apply | last > Treat bracketed groups as individual characters
@@ -37,6 +37,6 @@ def sYard(infix):
 
   return postfix
 
-#print(sYard("(a.b)|(c*.d)"))
-#print(sYard("(a.b)|(c*.d?d)"))
+#print(shunt("(a.b)|(c*.d)"))
+#print(shunt("(a.b)|(c*.d?d)"))
 # Prints out ab.c*d.|
