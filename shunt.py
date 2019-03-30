@@ -12,7 +12,7 @@ def shunt(infix):
   postfix = ""
   stack = ""
 
-  for c in infix: #
+  for c in infix: 
     if c == '(':
       stack = stack + c # Push ( to the stack
     elif c == ')':
@@ -29,7 +29,6 @@ def shunt(infix):
       stack = stack + c
     else:
       postfix = postfix + c
-
   while stack:
     # Take end of stack put it onto postfix, then remove it from the stack
     postfix = postfix + stack[-1]
