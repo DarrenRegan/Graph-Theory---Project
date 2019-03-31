@@ -3,9 +3,9 @@ G00326934 - Graph Theory Project - build a non-deterministic finite automaton (N
 
 # Run program
 ```
-1. Download Zipped folder from github and unzip the folder
-2. Open unzipped folder and type cmd in file explorer to open the folder in command promt
-3. Once in the folder in command line type python matchRegEx.py to start script
+1. Clone Git Repo OR Download Zipped folder from github and unzip the folder
+2. Open unzipped folder/Cloned Git Repo and type cmd in file explorer to open the folder in command promt
+3. Once in the folder in command line type python matchRegEx.py to execute script
 ```
 
 ## Examples of Regular Expressions
@@ -69,5 +69,6 @@ G00326934 - Graph Theory Project - build a non-deterministic finite automaton (N
 * [Infix-Pofix](https://www.geeksforgeeks.org/stack-set-2-infix-to-postfix) - Resource explaining infix-postfix with code examples in 5 different languages (C++, C, Java, Python, C#)
 * [Python](http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html) - Resource for Infix, Prefix and Postfix Expressions
 
-
+# Author
+* [Darren Regan](https://github.com/DarrenRegan)
 
