@@ -2,9 +2,11 @@
 G00326934 - Graph Theory Project - build a non-deterministic finite automaton (NFA) from a regular expression, and can use the NFA to check if the regular expression matches any given string of text.
 
 # Run program
+```
 1. Download Zipped folder from github and unzip the folder
 2. Open unzipped folder and type cmd in file explorer to open the folder in command promt
 3. Once in the folder in command line type python matchRegEx.py to start script
+```
 
 ## Examples of Regular Expressions
 1. a.b.c   - a single (a) followed by a single (b) followed by a single (c)
